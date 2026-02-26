@@ -13,7 +13,7 @@
       text-align: center;
     }
 
-    .hero {
+    .hero {margin-top: 70px;
       padding: 100px 20px;
       background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
       url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
@@ -63,14 +63,21 @@
 </head>
 
 <body>
-
+  
+<nav style="background-color:#0b1220; padding:15px; position:fixed; width:100%; top:0; left:0;">
+  <a href="#" style="color:white; margin:0 20px; text-decoration:none;">Home</a>
+  <a href="#about" style="color:white; margin:0 20px; text-decoration:none;">About</a>
+  <a href="#projects" style="color:white; margin:0 20px; text-decoration:none;">Projects</a>
+  <a href="#contact" style="color:white; margin:0 20px; text-decoration:none;">Contact</a>
+</nav>
+  
   <div class="hero">
     <h1>Equiti Gate</h1>
     <h2>Global Real Estate Development & Investment</h2>
     <a href="#contact" class="btn">Invest With Us</a>
   </div>
 
-  <div class="section">
+  <div class="section" id="about">
     <h2 class="gold">About Us</h2>
     <p>
       Equiti Gate is a distinguished global real estate development and investment company,
