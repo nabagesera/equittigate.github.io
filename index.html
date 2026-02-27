@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -19,7 +18,6 @@ body {
 }
 
 /* NAV */
-
 nav {
   background-color: rgba(11,18,32,0.95);
   padding: 20px 8%;
@@ -47,13 +45,10 @@ nav a:hover { color: #d4af37; }
 .logo {
   position: absolute;
   left: 8%;
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  color: #d4af37;
+  height: 60px;
 }
 
 /* HERO */
-
 .hero {
   min-height: 100vh;
   display: flex;
@@ -98,7 +93,6 @@ nav a:hover { color: #d4af37; }
 }
 
 /* SECTIONS */
-
 .section { padding: 120px 10%; }
 
 .section h2 {
@@ -109,7 +103,6 @@ nav a:hover { color: #d4af37; }
 }
 
 /* STATS */
-
 .stats {
   display: flex;
   gap: 60px;
@@ -127,7 +120,6 @@ nav a:hover { color: #d4af37; }
 }
 
 /* GRID */
-
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -150,7 +142,6 @@ nav a:hover { color: #d4af37; }
 .card-content { padding: 25px; }
 
 /* CONTACT */
-
 .contact-form { max-width: 600px; }
 
 .contact-form input,
@@ -172,7 +163,6 @@ nav a:hover { color: #d4af37; }
 }
 
 /* FOOTER */
-
 .footer {
   padding: 60px 10%;
   background-color: #080d17;
@@ -182,7 +172,6 @@ nav a:hover { color: #d4af37; }
 }
 
 /* FADE IN */
-
 .fade {
   opacity: 0;
   transform: translateY(40px);
@@ -195,26 +184,19 @@ nav a:hover { color: #d4af37; }
 }
 
 /* MOBILE */
-
 @media (max-width:768px) {
-
   nav { flex-direction: column; }
-
   nav a { margin: 10px 0; }
-
-  .logo { position: static; margin-bottom: 15px; }
-
+  .logo { position: static; margin-bottom: 15px; display:block; }
   .hero h1 { font-size: 42px; }
-
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-  <div class="logo">Equiti Gate</div>
+  <img src="logo.png" alt="Equiti Gate Logo" class="logo">
   <a href="#projects">Projects</a>
   <a href="#team">Leadership</a>
   <a href="#about">About</a>
@@ -236,7 +218,7 @@ nav a:hover { color: #d4af37; }
       <p>Continents Active</p>
     </div>
     <div class="stat-box">
-      <div class="stat-number" data-target="500">0</div>
+      <div class="stat-number" data-target="2.2">0</div>
       <p>Million USD AUM</p>
     </div>
     <div class="stat-box">
@@ -249,7 +231,6 @@ nav a:hover { color: #d4af37; }
 <section class="section fade" id="projects">
   <h2>Featured Developments</h2>
   <div class="grid">
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
       <div class="card-content">
@@ -257,7 +238,6 @@ nav a:hover { color: #d4af37; }
         <p>Ultra-prime residential developments in exclusive coastal markets.</p>
       </div>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f">
       <div class="card-content">
@@ -265,14 +245,12 @@ nav a:hover { color: #d4af37; }
         <p>High-yield residential properties in growing metropolitan hubs.</p>
       </div>
     </div>
-
   </div>
 </section>
 
 <section class="section fade" id="team">
   <h2>Leadership Team</h2>
   <div class="grid">
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a">
       <div class="card-content">
@@ -280,7 +258,6 @@ nav a:hover { color: #d4af37; }
         <p>Founder & Managing Director</p>
       </div>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2">
       <div class="card-content">
@@ -288,7 +265,6 @@ nav a:hover { color: #d4af37; }
         <p>Head of Investment Strategy</p>
       </div>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
       <div class="card-content">
@@ -296,7 +272,6 @@ nav a:hover { color: #d4af37; }
         <p>Director of Global Development</p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -325,9 +300,7 @@ nav a:hover { color: #d4af37; }
 </footer>
 
 <script>
-
 /* FADE EFFECT */
-
 const faders = document.querySelectorAll('.fade');
 window.addEventListener('scroll', () => {
   faders.forEach(el => {
@@ -339,7 +312,6 @@ window.addEventListener('scroll', () => {
 });
 
 /* COUNTER */
-
 const counters = document.querySelectorAll('.stat-number');
 counters.forEach(counter => {
   const update = () => {
@@ -355,7 +327,6 @@ counters.forEach(counter => {
   };
   update();
 });
-
 </script>
 
 </body>
