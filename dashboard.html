@@ -74,15 +74,26 @@ body {
 .top-bar h1 {
   font-family: 'Playfair Display', serif;
   color: #d4af37;
+  font-size: 28px;
 }
 
+.top-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.home-btn,
 .logout-btn {
   background: #d4af37;
   color: black;
   padding: 8px 15px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
 }
+
+/* STATS */
 
 .stats {
   display: flex;
@@ -92,7 +103,7 @@ body {
 }
 
 .stat-card {
-  flex: 1 1 200px;
+  flex: 1 1 220px;
   background: #111827;
   padding: 30px;
   border-radius: 10px;
@@ -109,6 +120,8 @@ body {
   margin: 10px 0 0;
   color: #d4af37;
 }
+
+/* SECTIONS */
 
 .section {
   margin-bottom: 60px;
@@ -156,17 +169,21 @@ a.document-link {
 
   <div class="top-bar">
     <h1>Equiti Gate Investor Portal</h1>
-    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <div class="top-buttons">
+      <a href="index.html" class="home-btn">Home</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
   </div>
 
   <div class="stats">
     <div class="stat-card">
-      <h3>Total Invested</h3>
-      <p>$250,000</p>
+      <h3>Assets Under Management (AUM)</h3>
+      <p>$2.2M</p>
     </div>
     <div class="stat-card">
       <h3>Current Portfolio Value</h3>
-      <p>$295,000</p>
+      <p>$2.6M</p>
     </div>
     <div class="stat-card">
       <h3>Projected ROI</h3>
