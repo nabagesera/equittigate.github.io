@@ -80,13 +80,37 @@
       font-size: 14px;
       color: #aaa;
     }
+    nav {
+  background-color:#0b1220;
+  padding:15px;
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+    @media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+}
   </style>
+  
 </head>
 
 <body>
   
-<nav style="background-color:#0b1220; padding:15px; position:fixed; width:100%; top:0; left:0; display:flex; justify-content:center; align-items:center; z-index:1000;">
-
+<nav>
   <div style="position:absolute; left:20px;">
   <img src="logo.png" alt="Equitti Gate Logo" style="height:60px;">
 </div>
