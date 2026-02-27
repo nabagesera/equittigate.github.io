@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equiti Gate | Sarah Mitchell Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body { margin:0; font-family:'Open Sans', sans-serif; background:#0b1220; color:white; }
+nav{ background:rgba(11,18,32,0.95); padding:20px 8%; display:flex; align-items:center; }
+nav a{ color:white; margin-left:25px; text-decoration:none; font-weight:600; }
+nav a:hover{ color:#d4af37; }
+.logo{ height:50px; }
+.dashboard{ padding:100px 10%; }
+.stats{ display:flex; gap:40px; flex-wrap:wrap; }
+.stat-box{ flex:1 1 200px; background:#111827; padding:25px; border-radius:10px; text-align:center; }
+.stat-number{ font-size:36px; font-weight:600; color:#d4af37; margin-bottom:8px; }
+table{ width:100%; border-collapse:collapse; margin-top:50px; }
+th,td{ padding:12px; border-bottom:1px solid #333; text-align:left; }
+th{ color:#d4af37; font-weight:600; }
+.footer{ padding:40px 10%; text-align:center; font-size:14px; color:#888; background:#080d17; }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <img src="logo.png" alt="Equiti Gate Logo" class="logo">
+  <a href="index.html">Home</a>
+</nav>
+
+<div class="dashboard">
+  <div class="welcome">
+    <h1>Welcome, Sarah Mitchell!</h1>
+    <p>Here’s your portfolio snapshot.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-number" id="aum">0M</div>
+      <p>Total AUM</p>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" id="roi">0%</div>
+      <p>Average ROI</p>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" id="investments">0</div>
+      <p>Active Investments</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:60px; color:#d4af37;">Your Investments</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Investment</th>
+        <th>Status</th>
+        <th>Expected ROI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>High-End Commercial Spaces</td>
+        <td>$75,000</td>
+        <td>Active</td>
+        <td>20%</td>
+      </tr>
+      <tr>
+        <td>Modern Urban Residences</td>
+        <td>$40,000</td>
+        <td>Active</td>
+        <td>16%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer class="footer">© 2026 Equiti Gate. All Rights Reserved.</footer>
+
+<script>
+function animateNumber(id,target,suffix="",duration=1500){
+  let start=0; 
+  let stepTime=Math.abs(Math.floor(duration/target)); 
+  let obj=document.getElementById(id);
+  let timer=setInterval(()=>{
+    start+=0.1;
+    if(start>=target){ start=target; clearInterval(timer); }
+    obj.innerText=(suffix==="M")?"$"+start.toFixed(1)+"M":Math.floor(start)+suffix;
+  },stepTime);
+}
+
+// Animate Sarah's dashboard
+animateNumber("aum",2.2,"M");
+animateNumber("roi",18,"%");
+animateNumber("investments",2);
+</script>
+
+</body>
+</html>
