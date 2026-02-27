@@ -3,108 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Equitti Gate</title>
+<title>Equiti Gate | Global Real Estate Investment</title>
 <link rel="icon" type="image/png" href="favicon.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #0f172a;
+  background-color: #0b1220;
   color: white;
-  text-align: center;
 }
 
 nav {
-  background-color:#0b1220;
-  padding:15px;
-  position:fixed;
-  width:100%;
-  top:0;
-  left:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:1000;
+  background-color: rgba(11,18,32,0.95);
+  padding: 20px 8%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
 }
 
 nav a {
-  color:white;
-  margin:0 20px;
-  text-decoration:none;
-  transition:0.3s;
+  color: white;
+  margin: 0 25px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color:#d4af37;
+  color: #d4af37;
+}
+
+.logo {
+  position: absolute;
+  left: 8%;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #d4af37;
 }
 
 .hero {
-  margin-top:80px;
-  padding:100px 20px;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
   url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-  background-size:cover;
-  background-position:center;
+  background-size: cover;
+  background-position: center;
 }
 
-h1 {
-  font-family:'Playfair Display', serif;
-  font-size:60px;
-  margin-bottom:10px;
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  margin: 0;
+  letter-spacing: 2px;
 }
 
-.gold {
-  color:#d4af37;
-}
-
-.section {
-  padding:60px 20px;
-  max-width:1000px;
-  margin:auto;
+.hero h2 {
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 22px;
+  max-width: 600px;
 }
 
 .btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 30px;
-  background-color:#d4af37;
-  color:black;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:5px;
-  transition:0.3s;
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 35px;
+  background-color: #d4af37;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background-color:white;
-  transform:scale(1.05);
+  background-color: white;
+  transform: translateY(-3px);
+}
+
+.section {
+  padding: 120px 10%;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #d4af37;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  flex: 1 1 300px;
+  background-color: #111827;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+}
+
+.about-text {
+  max-width: 800px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.contact-form {
+  max-width: 600px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-form button {
+  background-color: #d4af37;
+  color: black;
+  padding: 14px 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .footer {
-  padding:20px;
-  background-color:#111827;
-  font-size:14px;
-  color:#aaa;
+  padding: 60px 10%;
+  background-color: #080d17;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width:768px) {
+/* MOBILE */
+
+@media (max-width: 768px) {
 
   nav {
-    flex-direction:column;
+    flex-direction: column;
   }
 
   nav a {
-    display:block;
-    margin:10px 0;
+    margin: 10px 0;
   }
 
-  h1 {
-    font-size:36px;
+  .logo {
+    position: static;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
   }
 
 }
@@ -115,119 +208,110 @@ h1 {
 <body>
 
 <nav>
-
-  <div style="position:absolute; left:20px;">
-    <img src="logo.png" alt="Equitti Gate Logo" style="height:60px;">
-  </div>
-
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+  <div class="logo">Equiti Gate</div>
   <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+  <a href="#team">Leadership</a>
+  <a href="#about">About</a>
+  <a href="#contact">Invest</a>
   <a href="legal.html">Legal</a>
-
 </nav>
 
-<div class="hero">
-  <h1>Equitti Gate</h1>
-  <h2>Global Real Estate Development & Investment</h2>
+<section class="hero">
+  <h1>Global Real Estate Investment</h1>
+  <h2>Institutional-grade developments and structured wealth opportunities across international markets.</h2>
   <a href="#contact" class="btn">Invest With Us</a>
-</div>
+</section>
 
-<div class="section" id="projects">
-  <h2 class="gold">Featured Developments</h2>
+<section class="section" id="projects">
+  <h2>Featured Developments</h2>
+  <div class="grid">
 
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:40px;">
-
-    <div style="width:300px;">
-      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d" style="width:100%; border-radius:10px;">
-      <p>Luxury Waterfront Villas</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d">
+      <div class="card-content">
+        <h3>Luxury Waterfront Villas</h3>
+        <p>Ultra-prime residential developments in exclusive coastal markets.</p>
+      </div>
     </div>
 
-    <div style="width:300px;">
-      <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f" style="width:100%; border-radius:10px;">
-      <p>Modern Urban Residences</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f">
+      <div class="card-content">
+        <h3>Modern Urban Residences</h3>
+        <p>High-yield residential properties in growing metropolitan hubs.</p>
+      </div>
     </div>
 
-    <div style="width:300px;">
-      <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e" style="width:100%; border-radius:10px;">
-      <p>High-End Commercial Spaces</p>
-    </div>
-
-  </div>
-</div>
-
-<div class="section" id="team">
-  <h2 class="gold">Leadership Team</h2>
-
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; margin-top:40px;">
-
-    <div style="width:250px;">
-      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" style="width:100%; border-radius:10px;">
-      <h3>John Anderson</h3>
-      <p>Founder & Managing Director</p>
-    </div>
-
-    <div style="width:250px;">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" style="width:100%; border-radius:10px;">
-      <h3>Sarah Mitchell</h3>
-      <p>Head of Investment Strategy</p>
-    </div>
-
-    <div style="width:250px;">
-      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296" style="width:100%; border-radius:10px;">
-      <h3>David Collins</h3>
-      <p>Director of Global Development</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e">
+      <div class="card-content">
+        <h3>Commercial Investment Towers</h3>
+        <p>Strategic commercial developments delivering long-term value.</p>
+      </div>
     </div>
 
   </div>
-</div>
+</section>
 
-<div class="section" id="about">
-  <h2 class="gold">About Us</h2>
-  <p>
-    Equitti Gate is a distinguished global real estate development and investment company,
-    redefining access to elite property opportunities worldwide. We curate high-value developments
-    and structured investment solutions designed to deliver exceptional returns and long-term wealth growth.
-  </p>
-</div>
+<section class="section" id="team">
+  <h2>Leadership Team</h2>
+  <div class="grid">
 
-<div class="section">
-  <h2 class="gold">Why Choose Equitti Gate</h2>
-  <p>✔ Premium Global Developments</p>
-  <p>✔ Secure & Transparent Investment Structures</p>
-  <p>✔ Collective Wealth Growth Opportunities</p>
-</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a">
+      <div class="card-content">
+        <h3>John Anderson</h3>
+        <p>Founder & Managing Director</p>
+      </div>
+    </div>
 
-<div class="section" id="contact">
-  <h2 class="gold">Investor Inquiry</h2>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2">
+      <div class="card-content">
+        <h3>Sarah Mitchell</h3>
+        <p>Head of Investment Strategy</p>
+      </div>
+    </div>
 
-  <form action="https://formsubmit.co/mmblessingjr@gmail.com" method="POST" style="max-width:500px; margin:auto; text-align:left;">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
+      <div class="card-content">
+        <h3>David Collins</h3>
+        <p>Director of Global Development</p>
+      </div>
+    </div>
 
-    <label>Full Name</label><br>
-    <input type="text" name="name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:none;"><br>
+  </div>
+</section>
 
-    <label>Email Address</label><br>
-    <input type="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:none;"><br>
+<section class="section" id="about">
+  <h2>About Equiti Gate</h2>
+  <div class="about-text">
+    <p>
+      Equiti Gate is a global real estate development and investment firm
+      focused on structured wealth creation through premium property assets.
+      We connect investors to carefully curated opportunities designed for
+      capital preservation and sustainable growth.
+    </p>
+  </div>
+</section>
 
-    <label>Phone Number</label><br>
-    <input type="text" name="phone" style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:none;"><br>
+<section class="section" id="contact">
+  <h2>Investor Inquiry</h2>
 
-    <label>Investment Interest</label><br>
-    <textarea name="message" rows="4" required style="width:100%; padding:10px; margin-bottom:20px; border-radius:5px; border:none;"></textarea>
-
-    <button type="submit" style="background-color:#d4af37; color:black; padding:12px 25px; border:none; border-radius:5px; font-weight:bold;">
-      Submit Inquiry
-    </button>
-
+  <form action="https://formsubmit.co/mmblessingjr@gmail.com" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="phone" placeholder="Phone Number">
+    <textarea name="message" rows="4" placeholder="Investment Interest" required></textarea>
+    <button type="submit">Submit Inquiry</button>
   </form>
-</div>
 
-<div class="footer">
-  <p style="color:#d4af37; font-family:'Playfair Display', serif;">Equitti Gate</p>
-  <p>Global Real Estate Development & Investment</p>
-  <p>© 2026 Equitti Gate. All Rights Reserved.</p>
-</div>
+</section>
+
+<footer class="footer">
+  © 2026 Equiti Gate. All Rights Reserved.
+</footer>
 
 </body>
 </html>
