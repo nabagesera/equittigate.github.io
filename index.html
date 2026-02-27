@@ -314,18 +314,28 @@ window.addEventListener('scroll', () => {
 /* COUNTER */
 const counters = document.querySelectorAll('.stat-number');
 counters.forEach(counter => {
-  const update = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const inc = target / 100;
+  const target = parseFloat(counter.getAttribute('data-target'));
+  let count = 0;
+  const increment = target / 100;
+  
+  const updateCounter = () => {
     if(count < target){
-      counter.innerText = Math.ceil(count + inc);
-      setTimeout(update, 20);
+      count += increment;
+      if(counter.getAttribute('data-target') == "2.2") {
+        counter.innerText = "$" + count.toFixed(1) + "M";
+      } else {
+        counter.innerText = Math.ceil(count);
+      }
+      setTimeout(updateCounter, 20);
     } else {
-      counter.innerText = target;
+      if(counter.getAttribute('data-target') == "2.2") {
+        counter.innerText = "$2.2M";
+      } else {
+        counter.innerText = counter.getAttribute('data-target');
+      }
     }
-  };
-  update();
+  }
+  updateCounter();
 });
 </script>
 
