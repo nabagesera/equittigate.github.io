@@ -10,9 +10,7 @@
 
 <style>
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -21,13 +19,14 @@ body {
   color: white;
 }
 
+/* NAVIGATION */
+
 nav {
   background-color: rgba(11,18,32,0.95);
   padding: 20px 8%;
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,9 +43,7 @@ nav a {
   transition: 0.3s;
 }
 
-nav a:hover {
-  color: #d4af37;
-}
+nav a:hover { color: #d4af37; }
 
 .logo {
   position: absolute;
@@ -56,13 +53,15 @@ nav a:hover {
   color: #d4af37;
 }
 
+/* HERO */
+
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 10%;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
   url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
   background-size: cover;
   background-position: center;
@@ -90,7 +89,6 @@ nav a:hover {
   color: black;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 1px;
   border-radius: 4px;
   transition: 0.3s;
 }
@@ -100,16 +98,36 @@ nav a:hover {
   transform: translateY(-3px);
 }
 
-.section {
-  padding: 120px 10%;
-}
+/* SECTIONS */
+
+.section { padding: 120px 10%; }
 
 .section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   color: #d4af37;
 }
+
+/* STATS */
+
+.stats {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  flex: 1 1 200px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+/* GRID CARDS */
 
 .grid {
   display: flex;
@@ -126,32 +144,15 @@ nav a:hover {
   transition: 0.4s;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-}
+.card:hover { transform: translateY(-8px); }
 
-.card img {
-  width: 100%;
-  display: block;
-}
+.card img { width: 100%; }
 
-.card-content {
-  padding: 25px;
-}
+.card-content { padding: 25px; }
 
-.card-content h3 {
-  margin-top: 0;
-}
+/* CONTACT */
 
-.about-text {
-  max-width: 800px;
-  line-height: 1.8;
-  font-size: 16px;
-}
-
-.contact-form {
-  max-width: 600px;
-}
+.contact-form { max-width: 600px; }
 
 .contact-form input,
 .contact-form textarea {
@@ -171,6 +172,8 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* FOOTER */
+
 .footer {
   padding: 60px 10%;
   background-color: #080d17;
@@ -179,26 +182,30 @@ nav a:hover {
   color: #888;
 }
 
+/* FADE IN */
+
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
-  nav {
-    flex-direction: column;
-  }
+  nav { flex-direction: column; }
 
-  nav a {
-    margin: 10px 0;
-  }
+  nav a { margin: 10px 0; }
 
-  .logo {
-    position: static;
-    margin-bottom: 15px;
-  }
+  .logo { position: static; margin-bottom: 15px; }
 
-  .hero h1 {
-    font-size: 42px;
-  }
+  .hero h1 { font-size: 42px; }
 
 }
 
@@ -213,7 +220,6 @@ nav a:hover {
   <a href="#team">Leadership</a>
   <a href="#about">About</a>
   <a href="#contact">Invest</a>
-  <a href="legal.html">Legal</a>
 </nav>
 
 <section class="hero">
@@ -222,7 +228,25 @@ nav a:hover {
   <a href="#contact" class="btn">Invest With Us</a>
 </section>
 
-<section class="section" id="projects">
+<section class="section fade">
+  <h2>Our Impact</h2>
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-number" data-target="2">0</div>
+      <p>Continents Active</p>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="500">0</div>
+      <p>Million USD AUM</p>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="18">0</div>
+      <p>% Average ROI</p>
+    </div>
+  </div>
+</section>
+
+<section class="section fade" id="projects">
   <h2>Featured Developments</h2>
   <div class="grid">
 
@@ -242,18 +266,10 @@ nav a:hover {
       </div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e">
-      <div class="card-content">
-        <h3>Commercial Investment Towers</h3>
-        <p>Strategic commercial developments delivering long-term value.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<section class="section" id="team">
+<section class="section fade" id="team">
   <h2>Leadership Team</h2>
   <div class="grid">
 
@@ -265,53 +281,58 @@ nav a:hover {
       </div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2">
-      <div class="card-content">
-        <h3>Sarah Mitchell</h3>
-        <p>Head of Investment Strategy</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
-      <div class="card-content">
-        <h3>David Collins</h3>
-        <p>Director of Global Development</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<section class="section" id="about">
-  <h2>About Equiti Gate</h2>
-  <div class="about-text">
-    <p>
-      Equiti Gate is a global real estate development and investment firm
-      focused on structured wealth creation through premium property assets.
-      We connect investors to carefully curated opportunities designed for
-      capital preservation and sustainable growth.
-    </p>
-  </div>
-</section>
-
-<section class="section" id="contact">
+<section class="section fade" id="contact">
   <h2>Investor Inquiry</h2>
-
   <form action="https://formsubmit.co/mmblessingjr@gmail.com" method="POST" class="contact-form">
     <input type="text" name="name" placeholder="Full Name" required>
     <input type="email" name="email" placeholder="Email Address" required>
-    <input type="text" name="phone" placeholder="Phone Number">
     <textarea name="message" rows="4" placeholder="Investment Interest" required></textarea>
     <button type="submit">Submit Inquiry</button>
   </form>
-
 </section>
 
 <footer class="footer">
   © 2026 Equiti Gate. All Rights Reserved.
 </footer>
+
+<script>
+
+/* FADE IN ON SCROLL */
+
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+
+/* COUNTER ANIMATION */
+
+const counters = document.querySelectorAll('.stat-number');
+
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const inc = target / 100;
+    if(count < target){
+      counter.innerText = Math.ceil(count + inc);
+      setTimeout(update, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  update();
+});
+
+</script>
 
 </body>
 </html>
