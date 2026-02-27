@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Equiti Gate | Global Real Estate Investment</title>
-<link rel="icon" type="image/png" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -19,7 +18,7 @@ body {
   color: white;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav {
   background-color: rgba(11,18,32,0.95);
@@ -127,7 +126,7 @@ nav a:hover { color: #d4af37; }
   color: #d4af37;
 }
 
-/* GRID CARDS */
+/* GRID */
 
 .grid {
   display: flex;
@@ -281,7 +280,33 @@ nav a:hover { color: #d4af37; }
       </div>
     </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2">
+      <div class="card-content">
+        <h3>Sarah Mitchell</h3>
+        <p>Head of Investment Strategy</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296">
+      <div class="card-content">
+        <h3>David Collins</h3>
+        <p>Director of Global Development</p>
+      </div>
+    </div>
+
   </div>
+</section>
+
+<section class="section fade" id="about">
+  <h2>About Equiti Gate</h2>
+  <p style="max-width:800px; line-height:1.8;">
+    Equiti Gate is a global real estate development and investment firm
+    focused on structured wealth creation through premium property assets.
+    We connect investors to carefully curated opportunities designed for
+    capital preservation and sustainable growth.
+  </p>
 </section>
 
 <section class="section fade" id="contact">
@@ -300,10 +325,9 @@ nav a:hover { color: #d4af37; }
 
 <script>
 
-/* FADE IN ON SCROLL */
+/* FADE EFFECT */
 
 const faders = document.querySelectorAll('.fade');
-
 window.addEventListener('scroll', () => {
   faders.forEach(el => {
     const top = el.getBoundingClientRect().top;
@@ -313,10 +337,9 @@ window.addEventListener('scroll', () => {
   });
 });
 
-/* COUNTER ANIMATION */
+/* COUNTER */
 
 const counters = document.querySelectorAll('.stat-number');
-
 counters.forEach(counter => {
   const update = () => {
     const target = +counter.getAttribute('data-target');
