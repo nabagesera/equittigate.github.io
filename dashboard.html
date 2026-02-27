@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -17,29 +16,25 @@ body {
 }
 
 /* LOGIN SCREEN */
-
 #login-screen {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .login-box {
   background: #111827;
   padding: 40px;
   border-radius: 10px;
-  width: 320px;
+  width: 340px;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
-
 .login-box h2 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 30px;
   color: #d4af37;
 }
-
 .login-box input {
   width: 100%;
   padding: 12px;
@@ -47,7 +42,6 @@ body {
   border-radius: 5px;
   border: none;
 }
-
 .login-box button {
   width: 100%;
   padding: 12px;
@@ -58,7 +52,6 @@ body {
 }
 
 /* DASHBOARD */
-
 #dashboard {
   display: none;
   padding: 60px 8%;
@@ -70,18 +63,15 @@ body {
   align-items: center;
   margin-bottom: 50px;
 }
-
 .top-bar h1 {
   font-family: 'Playfair Display', serif;
   color: #d4af37;
   font-size: 28px;
 }
-
 .top-buttons {
   display: flex;
   gap: 15px;
 }
-
 .home-btn,
 .logout-btn {
   background: #d4af37;
@@ -94,27 +84,23 @@ body {
 }
 
 /* STATS */
-
 .stats {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 60px;
 }
-
 .stat-card {
   flex: 1 1 220px;
   background: #111827;
   padding: 30px;
   border-radius: 10px;
 }
-
 .stat-card h3 {
   margin: 0;
   font-size: 14px;
   color: #aaa;
 }
-
 .stat-card p {
   font-size: 28px;
   margin: 10px 0 0;
@@ -122,24 +108,20 @@ body {
 }
 
 /* SECTIONS */
-
 .section {
   margin-bottom: 60px;
 }
-
 .section h2 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 20px;
   color: #d4af37;
 }
-
 .update-box {
   background: #111827;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 15px;
 }
-
 a.document-link {
   display: block;
   margin-bottom: 10px;
@@ -147,29 +129,32 @@ a.document-link {
   text-decoration: none;
 }
 
+/* MOBILE */
+@media (max-width:768px) {
+  .top-bar { flex-direction: column; gap: 15px; }
+  .stats { flex-direction: column; }
+}
 </style>
 </head>
 
 <body>
 
 <!-- LOGIN -->
-
 <div id="login-screen">
   <div class="login-box">
     <h2>Investor Access</h2>
     <input type="password" id="password" placeholder="Enter Access Code">
     <button onclick="login()">Access Dashboard</button>
     <p id="error" style="color:red;"></p>
+    <p style="color:#aaa; font-size:12px; margin-top:10px;">Use code: <b>Equiti2026</b></p>
   </div>
 </div>
 
 <!-- DASHBOARD -->
-
 <div id="dashboard">
 
   <div class="top-bar">
     <h1>Equiti Gate Investor Portal</h1>
-
     <div class="top-buttons">
       <a href="index.html" class="home-btn">Home</a>
       <button class="logout-btn" onclick="logout()">Logout</button>
@@ -193,15 +178,8 @@ a.document-link {
 
   <div class="section">
     <h2>Project Updates</h2>
-
-    <div class="update-box">
-      Waterfront Villas – Phase 1 completed. Phase 2 begins Q3 2026.
-    </div>
-
-    <div class="update-box">
-      Urban Residences – 70% units pre-sold.
-    </div>
-
+    <div class="update-box">Waterfront Villas – Phase 1 completed. Phase 2 begins Q3 2026.</div>
+    <div class="update-box">Urban Residences – 70% units pre-sold.</div>
   </div>
 
   <div class="section">
@@ -214,7 +192,6 @@ a.document-link {
 </div>
 
 <script>
-
 function login() {
   var pass = document.getElementById("password").value;
   if(pass === "Equiti2026") {
@@ -224,12 +201,10 @@ function login() {
     document.getElementById("error").innerText = "Incorrect Access Code";
   }
 }
-
 function logout() {
   document.getElementById("dashboard").style.display = "none";
   document.getElementById("login-screen").style.display = "flex";
 }
-
 </script>
 
 </body>
