@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equiti Gate | Investor Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+  background:#0b1220;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.login-box{
+  background:#111827;
+  padding:40px;
+  border-radius:12px;
+  width:350px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
+  text-align:center;
+}
+
+h1{
+  font-family:'Playfair Display', serif;
+  color:#d4af37;
+  margin-bottom:25px;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:6px;
+  font-size:14px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#d4af37;
+  border:none;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover{
+  background:#c19d2f;
+}
+
+.error{
+  color:#ff4d4d;
+  margin-top:10px;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+  <h1>Investor Portal</h1>
+
+  <input type="text" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+
+  <div class="error" id="error"></div>
+</div>
+
+<script>
+function login(){
+
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  // Fake investor database (static for now)
+  const investors = {
+    "john@equiti.com": {
+      password: "john123",
+      page: "john-dashboard.html"
+    },
+    "sarah@equiti.com": {
+      password: "sarah123",
+      page: "sarah-dashboard.html"
+    }
+  };
+
+  if(investors[email] && investors[email].password === password){
+    window.location.href = investors[email].page;
+  } else {
+    document.getElementById("error").innerText = "Invalid login details";
+  }
+}
+</script>
+
+</body>
+</html>
